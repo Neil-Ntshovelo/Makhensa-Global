@@ -9,6 +9,7 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 import backGround from '../assets/a.avif';
 
+
 const ServiceCard = ({ title, imgSrc, description, onReadMore, id }) => (
     <div className='bg-blue-900 shadow-lg rounded-lg p-4 m-2 w-lg sm:w-full md:w-full lg:w-full transition-transform duration-700 transform hover:scale-100 ease-in-out'>
         <h3 className='text-yellow-400 text-2xl font-semibold mb-2'>{title}</h3>
