@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import StartUP from '../assets/StartUP.webp';
+import StartUP from '../assets/startUP.webp';
 import TeamWork from '../assets/teamwork.webp';
 import student from '../assets/student.webp';
 import Business from '../assets/business.webp';
