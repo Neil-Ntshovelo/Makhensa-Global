@@ -119,7 +119,7 @@ const ContactUs = () => {
           <div className="flex flex-col items-center text-gray-600 mb-4 m-2">
             <p className="flex items-center mb-1">
               <FaEnvelope className="mr-2 text-blue-600" aria-label="Email" />
-              makhensagroup@gmail.com
+              Admin@makhensaglobalictservices.com
             </p>
             <p className="flex items-center mb-3 mt-3"> 
               <FaPhone className='mr-2 text-green-600' aria-label="Telephone" />
@@ -127,7 +127,7 @@ const ContactUs = () => {
             </p>
             <p className="flex items-center mb-5">
               <FaMapMarkerAlt className="mr-2 text-red-600" aria-label="Location" />
-              Office 04 Dr Hlathi Complex, Malamulele, South Africa
+              Office 04 Makhensa Global ICT Services,Malamulele, South Africa
             </p>
             <p className="flex items-center mb-5">
               <FaMapMarkerAlt className="mr-2 text-red-600" aria-label="Location" />
@@ -152,20 +152,20 @@ const ContactUs = () => {
           </div>
         </div>
         <div className="mb-8 md:w-1/2 mx-4 md:mr-24">
-          <iframe
-            width="100%"
-            height="400"
-            frameBorder="0"
-            scrolling="no"
-            marginHeight="0"
-            marginWidth="0"
-            src="https://maps.google.com/maps?width=100%&height=400&hl=en&q=Office%2004%20Dr%20Hlathi,%20complex%20Malamulele%20,South%20Africa+(Makhensa%20Global%20ICT%20Services)&t=&z=14&ie=UTF8&iwloc=B&output=embed"
-            title="Google Map"
-            className="rounded-xl shadow-2xl"
-          >
-            <a href="https://www.gps.ie/">gps tracker sport</a>
-          </iframe>
-        </div>
+        <iframe
+          width="100%"
+          height="400"
+          frameBorder="0"
+          scrolling="no"
+          marginHeight="0"
+          marginWidth="0"
+          src="https://maps.google.com/maps?width=100%&height=400&hl=en&q=Makhensa%20Global%20&ll=-23.0004206,30.6912809&z=14&ie=UTF8&iwloc=B&output=embed"
+          title="Google Map"
+          className="rounded-xl shadow-2xl"
+        >
+          <a href="https://www.gps.ie/">gps tracker sport</a>
+        </iframe>
+      </div>
       </motion.div>
 
       <hr className="border-t border-gray-300 my-12" />
