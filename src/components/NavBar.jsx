@@ -9,6 +9,7 @@ const NavLinks = () => {
       <RouterNavLink to="/" className="nav-link text-white font-semibold hover:text-yellow-500 mb-2">Home</RouterNavLink>
       <RouterNavLink to="/about" className="nav-link text-white font-semibold hover:text-yellow-500 mb-2">About</RouterNavLink>
       <RouterNavLink to="/contact" className="nav-link text-white font-semibold hover:text-yellow-500 mb-2">Contact Us</RouterNavLink>
+
     </>
   );
 }
