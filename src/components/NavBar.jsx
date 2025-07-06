@@ -37,7 +37,7 @@ const Nav = () => {
   return (
       <>
           <nav className="flex w-1/3 justify-end">
-              <div className="hidden w-full justify-end pr-20 space-x-10 md:flex">
+              <div className="hidden w-full justify-end pr-20z space-x-10 md:flex">
                   <NavLinks />
               </div>
               <div className="md:hidden">

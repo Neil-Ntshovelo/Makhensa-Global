@@ -9,7 +9,6 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 import backGround from '../assets/a.avif';
 
-
 const ServiceCard = ({ title, imgSrc, description, onReadMore, id }) => (
     <div className='bg-blue-900 shadow-lg rounded-lg p-4 m-2 w-lg sm:w-full md:w-full lg:w-full transition-transform duration-700 transform hover:scale-100 ease-in-out'>
         <h3 className='text-yellow-400 text-2xl font-semibold mb-2'>{title}</h3>
@@ -113,7 +112,7 @@ const Services = () => {
                 </div>
                 <div className="fixed bottom-5 right-5 z-50">
                     <a 
-                        href="https://wa.me/YourPhoneNumber?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
+                        href="https://wa.me/0818331003?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="bg-green-500 text-white px-4 py-2 rounded-lg shadow -lg hover:bg-green-600 transition duration-500 flex items-center"

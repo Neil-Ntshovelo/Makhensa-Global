@@ -35,7 +35,7 @@ const About = () => {
             To lead in business excellence with an aim to put South Africa
             <br />
             <span className='text-blue-200 font-semibold'>
-              First in the map of property business and to make South Africa Second to none
+             IT solution for all
             </span>
           </p>
         </div>

@@ -142,7 +142,7 @@ const ContactUs = () => {
             <a href="https://www.facebook.com/profile.php?id=61572482734254" target="_blank" rel="noopener noreferrer">
               <FaFacebook className="text-blue-600 hover:text-blue-800 transform hover:scale-125 transition-transform duration-200" />
             </a>
-            <a href="https://chat.whatsapp.com/GfJYfhWRSGl0OzM6GXl0uX " target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/0818331003?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" >
               <FaWhatsapp className="text-green-600 hover:text-green-800 transform hover:scale-125 transition-transform duration-200" />
             </a>
            
@@ -244,7 +244,7 @@ const ContactUs = () => {
       <div className="fixed bottom-5 right-5 z-50">
         <a 
           ref={buttonRef}
-          href="https://wa.me/YourPhoneNumber?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
+          href="https://wa.me/0818331003?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
           target="_blank" 
           rel="noopener noreferrer" 
           className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-green-600 transition duration-500 flex items-center"

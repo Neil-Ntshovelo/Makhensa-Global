@@ -29,7 +29,7 @@ const Footer = () => {
                 <a href="https://www.facebook.com/profile.php?id=61572482734254" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                     <FaFacebook className="text-white hover:text-yellow-400 transition duration-200" />
                 </a>
-                <a href="https://chat.whatsapp.com/GfJYfhWRSGl0OzM6GXl0uX" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <a href="https://wa.me/0818331003?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                     <FaWhatsapp className="text-white hover:text-yellow-400 transition duration-200" />
                 </a>
                 
