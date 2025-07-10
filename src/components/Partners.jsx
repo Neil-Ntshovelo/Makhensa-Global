@@ -4,13 +4,18 @@ import 'react-slideshow-image/dist/styles.css';
 import Seta from '../assets/th.jpeg';
 import MictSeta from '../assets/mictseta.jpeg';
 import Cisco from '../assets/cisco.jpeg';
-
+import OIP from '../assets/OIP.jpeg';
+import Comptia from '../assets/comptia.webp'
+import ServiceSeta from '../assets/ServiceSeta.jpeg'
 
 const Partners = () => {
   const slideImages = [
     { url: Seta, caption: 'Seta Partnership' },
     { url: MictSeta, caption: 'Mict Setas Partnership' },
     { url: Cisco, caption: 'Cisco Partnership' },
+    { url: OIP, caption: 'Bank SETA Partnership' },
+    {url: Comptia, caption :'Comptia'},
+    {url: ServiceSeta, caption : 'Service SETA'},
   ];
 
   return (
@@ -25,7 +30,6 @@ const Partners = () => {
             duration={750} 
             transitionDuration={1000} 
             arrows={false} 
-            
           >
             {slideImages.map((slideImage, index) => (
               <div className='flex flex-col items-center' key={index}>
@@ -34,7 +38,6 @@ const Partners = () => {
                   alt={slideImage.caption} 
                   className='w-20 h-auto object-fill sm:w-32 md:w-32 lg:w-32 transition-transform duration-300 hover:scale-105' 
                 />
-               
               </div>
             ))}
           </Slide>

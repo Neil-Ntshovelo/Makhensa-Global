@@ -32,7 +32,7 @@ const About = () => {
             Enroll Into Excellency
           </h2>
           <p className="text-base sm:text-lg lg:text-xl text-zinc-100 mb-4">
-            To lead in business excellence with an aim to put South Africa
+            To lead in business excellence with an aim to put South Africa first in
             <br />
             <span className='text-blue-200 font-semibold'>
              IT solution for all
