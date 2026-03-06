@@ -1,44 +1,155 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { FaFacebook, FaWhatsapp, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  FaFacebook,
+  FaWhatsapp,
+  FaLinkedin,
+  FaMapMarkerAlt,
+  FaPhone,
+  FaEnvelope,
+} from "react-icons/fa";
 
 const Footer = () => {
-    return (
-        <footer className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-8">
-            <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-                <div className="mb-4 md:mb-0 text-center md:text-left">
-                    <h1 className="text-lg font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-yellow-600">
-                        Makhensa Global ICT Services
-                    </h1>
-                    <p className="text-sm">&copy; {new Date().getFullYear()} Makhensa Global ICT Services. All rights reserved.</p>
-                </div>
-                <nav className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 mb-8 text-center md:text-left">
-                    <Link to="/about" className="text-sm hover:underline transition duration-200 hover:text-yellow-400 active:text-yellow-500" aria-label="About Us">
-                        About
-                    </Link>
-                    <Link to="/services-items" className="text-sm hover:underline transition duration-200 hover:text-yellow-400 active:text-yellow-500" aria-label="Our Services">
-                        Services
-                    </Link>
-                    <Link to="/contact" className="text-sm hover:underline transition duration-200 hover:text-yellow-400 active:text-yellow-500" aria-label="Contact Us">
-                        Contact
-                    </Link>
-                </nav>
-            </div>
-            <div className="flex justify-center space-x-4 mt-4">
-                {/* Social Media Links */}
-                <a href="https://www.facebook.com/profile.php?id=61572482734254" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                    <FaFacebook className="text-white hover:text-yellow-400 transition duration-200" />
-                </a>
-                <a href="https://wa.me/0818331003?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                    <FaWhatsapp className="text-white hover:text-yellow-400 transition duration-200" />
-                </a>
-                
-                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <FaLinkedin className="text-white hover:text-yellow-400 transition duration-200" />
-                </a>
-            </div>
-        </footer>
-    );
+  return (
+    <footer className="bg-gray-900 text-gray-300">
+
+      {/* TOP FOOTER */}
+      <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+        {/* COMPANY INFO */}
+        <div>
+          <h2 className="text-xl font-bold text-white mb-4">
+            Makhensa Global ICT Services
+          </h2>
+
+          <p className="text-sm leading-relaxed text-gray-400">
+            Empowering individuals and businesses with modern technology
+            solutions, digital skills training, and innovative ICT services
+            designed to prepare professionals for the digital future.
+          </p>
+        </div>
+
+        {/* QUICK LINKS */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-4">
+            Quick Links
+          </h3>
+
+          <ul className="space-y-2 text-sm">
+            <li>
+              <Link to="/about" className="hover:text-yellow-400 transition">
+                About Us
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/services-items" className="hover:text-yellow-400 transition">
+                Our Services
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/contact" className="hover:text-yellow-400 transition">
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* SERVICES */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-4">
+            Our Services
+          </h3>
+
+          <ul className="space-y-2 text-sm">
+            <li className="hover:text-yellow-400 transition cursor-pointer">
+              ICT Training
+            </li>
+            <li className="hover:text-yellow-400 transition cursor-pointer">
+              Software Development
+            </li>
+            <li className="hover:text-yellow-400 transition cursor-pointer">
+              IT Consulting
+            </li>
+            <li className="hover:text-yellow-400 transition cursor-pointer">
+              Technology Solutions
+            </li>
+          </ul>
+        </div>
+
+        {/* CONTACT INFO */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-4">
+            Contact Us
+          </h3>
+
+          <ul className="space-y-3 text-sm">
+
+            <li className="flex items-center gap-2">
+              <FaMapMarkerAlt className="text-yellow-400" />
+              South Africa
+            </li>
+
+            <li className="flex items-center gap-2">
+              <FaPhone className="text-yellow-400" />
+              081 833 1003
+            </li>
+
+            <li className="flex items-center gap-2">
+              <FaEnvelope className="text-yellow-400" />
+              info@makhensaict.co.za
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      {/* DIVIDER */}
+      <div className="border-t border-gray-700"></div>
+
+      {/* BOTTOM FOOTER */}
+      <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center">
+
+        <p className="text-sm text-gray-400 mb-4 md:mb-0">
+          © {new Date().getFullYear()} Makhensa Global ICT Services. All rights reserved.
+        </p>
+
+        {/* SOCIAL ICONS */}
+        <div className="flex space-x-5 text-lg">
+
+          <a
+            href="https://www.facebook.com/profile.php?id=61572482734254"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-yellow-400 transition"
+          >
+            <FaFacebook />
+          </a>
+
+          <a
+            href="https://wa.me/0818331003?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-yellow-400 transition"
+          >
+            <FaWhatsapp />
+          </a>
+
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-yellow-400 transition"
+          >
+            <FaLinkedin />
+          </a>
+
+        </div>
+      </div>
+
+    </footer>
+  );
 };
 
 export default Footer;
