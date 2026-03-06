@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from 'react';
-import AboutImage from '../assets/aboutImage.jpg'; 
-import { FaWhatsapp } from 'react-icons/fa';
-import Testimony from './Testimony'; 
-import { Link } from 'react-router-dom'; 
+import React, { useEffect, useRef } from "react";
+import AboutImage from "../assets/aboutImage.jpg";
+import { FaWhatsapp } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import Testimony from "./Testimony";
 
 const About = () => {
   const buttonRef = useRef(null);
@@ -10,147 +10,187 @@ const About = () => {
   useEffect(() => {
     const button = buttonRef.current;
     if (button) {
-      button.classList.add('animate-bounce');
+      button.classList.add("animate-bounce");
       const timeout = setTimeout(() => {
-        button.classList.remove('animate-bounce');
-      }, 3000); 
+        button.classList.remove("animate-bounce");
+      }, 3000);
       return () => clearTimeout(timeout);
     }
   }, []);
 
   return (
     <>
-      <section className="relative h-64 sm:h-96">
-        <img 
-          src={AboutImage} 
-          alt="A representation of excellence in business education" 
-          className='w-full h-full object-cover'
-        /> 
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-500 opacity-50"></div> 
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center px-4">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-br from-white to-zinc-300 mb-4">
-            Enroll Into Excellency
-          </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-zinc-100 mb-4">
-            To lead in business excellence with an aim to put South Africa first in
-            <br />
-            <span className='text-blue-200 font-semibold'>
-             IT solution for all
-            </span>
+      {/* HERO SECTION */}
+      <section className="relative min-h-[60vh] flex items-center justify-center">
+
+        <img
+          src={AboutImage}
+          alt="Business Education"
+          className="absolute w-full h-full object-cover"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40"></div>
+
+        <div className="relative text-center max-w-4xl px-6">
+          <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
+            Building Future Leaders Through
+            <span className="text-yellow-400"> Technology & Business</span>
+          </h1>
+
+          <p className="mt-6 text-lg md:text-xl text-gray-200">
+            At Makhensa Global ICT & Business College we equip individuals
+            with practical skills, entrepreneurial knowledge and innovative
+            technology solutions to succeed in today's digital economy.
           </p>
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto p-4 sm:p-6">
-        <h2 className="text-blue-800 text-2xl sm:text-3xl font-bold text-center mb-4">Our Vision</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {/* VISION SECTION */}
+      <section className="max-w-7xl mx-auto px-6 py-16">
+
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900">Our Vision</h2>
+          <p className="text-gray-600 mt-2">
+            Empowering individuals and businesses to thrive through education,
+            entrepreneurship and innovation.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {visionData.map((vision, index) => (
-            <VisionCard 
-              key={index}
-              bgColor={vision.bgColor} 
-              textColor={vision.textColor} 
-              content={vision.content}
-            />
+            <VisionCard key={index} content={vision.content} />
           ))}
         </div>
       </section>
 
-      <section className="bg-white p-6 rounded-xl shadow-lg max-w-4xl mx-auto mt-6 mb-4">
-        <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-4 text-center">
-          Our Mission
-        </h2>
-        <p className="text-base sm:text-lg text-gray-700 mb-4 text-center">
-          At Makhensa Global ICT & Business College, our mission is to empower individuals through education and practical training, equipping them with the skills and knowledge necessary to thrive in the competitive business landscape. We are dedicated to:
-        </p>
-        <ul className="list-disc list-inside text-base sm:text-lg text-gray-700 mb-4 space-y-2">
-          {missionData.map((mission, index) => (
-            <li key={index}>
-              <strong className="text-blue-600">{mission.title}</strong> {mission.description}
-            </li>
-          ))}
-        </ul>
-        <p className="text-base sm:text-lg text-gray-700 text-center">
-          Together, we envision a future where every aspiring entrepreneur has the tools and support needed to turn their dreams into reality, ultimately transforming the economic landscape of our nation.
-        </p>
+      {/* MISSION SECTION */}
+      <section className="bg-gray-50 py-16">
+
+        <div className="max-w-5xl mx-auto px-6">
+
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900">
+              Our Mission
+            </h2>
+            <p className="text-gray-600 mt-4">
+              Our mission is to empower individuals with the skills,
+              resources and confidence needed to succeed in business
+              and technology.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {missionData.map((mission, index) => (
+              <div
+                key={index}
+                className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition"
+              >
+                <h3 className="font-semibold text-blue-700 mb-2">
+                  {mission.title}
+                </h3>
+
+                <p className="text-gray-600 text-sm">
+                  {mission.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+        </div>
       </section>
 
-      <div className="text-center mt-6">
-        <Link to="/services-items" className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300 text-lg">
-          Discover More About Our Services
-        </Link>
-      </div>
+      {/* CTA SECTION */}
+      <section className="py-16 bg-blue-900 text-white text-center">
 
-      <div className="fixed bottom-5 right-5 z-50">
-        <a 
-          ref={buttonRef}
-          href="https://wa.me/1234567890?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-600 transition duration-500 flex items-center"
-          aria-label="Contact us on WhatsApp"
+        <h2 className="text-3xl font-bold mb-4">
+          Discover Our Programs & Services
+        </h2>
+
+        <p className="max-w-2xl mx-auto text-blue-100 mb-8">
+          Explore the wide range of ICT training, consulting services and
+          innovative technology solutions we provide to help individuals
+          and businesses grow.
+        </p>
+
+        <Link
+          to="/services-items"
+          className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition"
         >
-          Contact Us on WhatsApp
-          <FaWhatsapp className="ml-2" />
+          View Our Services
+        </Link>
+
+      </section>
+
+      {/* TESTIMONIALS */}
+      <Testimony />
+
+      {/* WHATSAPP FLOATING BUTTON */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <a
+          ref={buttonRef}
+          href="https://wa.me/0818331003?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full shadow-xl flex items-center gap-2 transition"
+        >
+          Chat With Us
+          <FaWhatsapp />
         </a>
       </div>
-
-      <Testimony />
     </>
   );
 };
 
-const VisionCard = ({ bgColor, textColor, content }) => (
-  <div className={`${bgColor} col-span-1 m-2 rounded-lg transition-shadow duration-300 hover:shadow-2xl`}>
-    <p className={`text-base sm:text-lg ${textColor} mb-4 p-4`}>
-      {content}
-    </p>
+const VisionCard = ({ content }) => (
+  <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+    <p className="text-gray-600 leading-relaxed">{content}</p>
   </div>
 );
 
-// Sample data for vision and mission
 const visionData = [
   {
-    bgColor: "bg-yellow-600",
-    textColor: "text-gray-50",
-    content: "Makhensa Global IT & BUSINESS COLLEGE is dedicated to bridging the gap between long-established businesses and emerging enterprises. We believe that every business deserves the opportunity to be integrated into the mainstream economy of our country."
+    content:
+      "Makhensa Global ICT & Business College bridges the gap between established businesses and emerging enterprises, ensuring that all businesses can participate in South Africa’s growing economy."
   },
   {
-    bgColor: "bg-zinc-200",
-    textColor: "text-gray-600",
-    content: "At Makhensa Global, we are committed to empowering individuals to establish their own businesses, fostering a mindset of self-reliance rather than dependency. We believe that cultivating an entrepreneurial spirit is essential for personal and economic growth, particularly in the context of the South African economy."
+    content:
+      "We empower individuals to create their own businesses, promoting independence, innovation and entrepreneurial thinking."
   },
   {
-    bgColor: "bg-zinc-200",
-    textColor: "text-gray-600",
-    content: "In a landscape where many face challenges and uncertainties, we strive to provide the necessary tools, resources, and support to help aspiring entrepreneurs navigate the complexities of starting and running a business. Our mission is to inspire confidence and resilience, enabling individuals to take charge of their financial futures and contribute positively to their communities."
+    content:
+      "We provide tools, resources and mentorship to help aspiring entrepreneurs overcome challenges and successfully launch their businesses."
   },
   {
-    bgColor: "bg-blue-500",
-    textColor: "text-zinc-200",
-    content: "By promoting entrepreneurship, we aim to create a ripple effect that not only uplifts individuals but also strengthens the economy as a whole. We envision a future where self-sufficient businesses thrive, creating jobs and opportunities that empower others to follow suit. Together, we can transform the narrative of dependency into one of innovation, growth, and sustainable success."
+    content:
+      "Through entrepreneurship and digital skills development, we aim to strengthen communities, create jobs and contribute to sustainable economic growth."
   }
 ];
 
 const missionData = [
   {
-    title: "Fostering Entrepreneurship:",
-    description: " We aim to cultivate an entrepreneurial mindset among our students, encouraging innovation and self-reliance as they embark on their business journeys."
+    title: "Fostering Entrepreneurship",
+    description:
+      "We cultivate an entrepreneurial mindset that encourages innovation, creativity and self-reliance."
   },
   {
-    title: "Bridging the Gap:",
-    description: " We strive to connect emerging entrepreneurs with established businesses, facilitating mentorship and collaboration that enriches the local economy."
+    title: "Bridging the Gap",
+    description:
+      "We connect emerging entrepreneurs with established businesses to encourage mentorship and collaboration."
   },
   {
-    title: "Providing Resources:",
-    description: " We are committed to offering comprehensive resources, including workshops, networking opportunities, and access to industry experts, to support our students in overcoming challenges and achieving their goals."
+    title: "Providing Resources",
+    description:
+      "Our programs include workshops, networking opportunities and expert guidance to help students succeed."
   },
   {
-    title: "Promoting Inclusivity:",
-    description: " We believe in creating an inclusive environment where individuals from diverse backgrounds can access quality education and resources, ensuring that everyone has the opportunity to succeed."
+    title: "Promoting Inclusivity",
+    description:
+      "We ensure individuals from diverse backgrounds have equal access to quality education and opportunities."
   },
   {
-    title: "Driving Economic Growth:",
-    description: " By empowering individuals to start and grow their own businesses, we contribute to the economic development of South Africa, creating jobs and fostering sustainable communities."
+    title: "Driving Economic Growth",
+    description:
+      "By empowering entrepreneurs, we help create jobs and build stronger communities across South Africa."
   }
 ];
 

@@ -1,24 +1,53 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import { motion } from "framer-motion";
 
-const ServiceCard = ({ title, imgSrc, description, onReadMore, id }) => (
-    <div className='bg-blue-900 shadow-lg rounded-lg p-4 m-2 w-lg sm:w-full md:w-full lg:w-full transition-transform duration-700 transform hover:scale-100 ease-in-out'>
-        <h3 className='text-yellow-400 text-2xl font-semibold mb-2'>{title}</h3>
-        <img src={imgSrc} alt={`${title} illustration`} className='w-full h-20 object-contain rounded-md mb-5' loading="lazy" />
-        <p className='text-gray-200 text-lg mb-4'>{description}</p>
-        <button 
-            className='bg-yellow-400 text-gray-500 py-2 px-4 rounded hover:bg-yellow-500 transition duration-300' 
-            onClick={() => onReadMore(id)} 
-            aria-label={`Read more about ${title}`}
-        >
-            Read more...
-        </button>
-    </div>
-);
+const ServiceCard = ({ title, imgSrc, description, onReadMore, id }) => {
+  return (
+    <motion.div
+      whileHover={{ y: -6 }}
+      transition={{ duration: 0.3 }}
+      className="bg-blue-900 rounded-2xl shadow-lg p-6 flex flex-col justify-between 
+      hover:shadow-2xl transition-all duration-500 group"
+    >
+      {/* IMAGE */}
+      <div className="flex justify-center mb-6">
+        <img
+          src={imgSrc}
+          alt={`${title} illustration`}
+          loading="lazy"
+          className="w-20 h-20 object-contain transition-transform duration-500 group-hover:scale-110"
+        />
+      </div>
+
+      {/* TITLE */}
+      <h3 className="text-yellow-400 text-xl font-semibold mb-3 text-center">
+        {title}
+      </h3>
+
+      {/* DESCRIPTION */}
+      <p className="text-gray-200 text-base leading-relaxed mb-6 text-center">
+        {description}
+      </p>
+
+      {/* CTA */}
+      <button
+        onClick={() => onReadMore(id)}
+        aria-label={`Read more about ${title}`}
+        className="bg-yellow-400 text-blue-900 font-semibold py-2 px-5 rounded-lg 
+        hover:bg-yellow-500 transition duration-300 self-center"
+      >
+        Learn More
+      </button>
+    </motion.div>
+  );
+};
 
 ServiceCard.propTypes = {
-    title: PropTypes.string.isRequired,
-    imgSrc: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    onReadMore: PropTypes.func.isRequired,
-    id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  imgSrc: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  onReadMore: PropTypes.func.isRequired,
+  id: PropTypes.number.isRequired,
 };
+
+export default ServiceCard;

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import {
   FaFacebook,
   FaWhatsapp,
@@ -9,16 +10,25 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 
+import logo from "../assets/logo.png"; // Update path if needed
+
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300">
 
       {/* TOP FOOTER */}
-      <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
 
-        {/* COMPANY INFO */}
-        <div>
-          <h2 className="text-xl font-bold text-white mb-4">
+        {/* COMPANY BRANDING + LOGO */}
+        <div className="space-y-4">
+
+          <img
+            src={logo}
+            alt="Makhensa Global ICT Services Logo"
+            className="w-36 object-contain hover:scale-105 transition duration-500"
+          />
+
+          <h2 className="text-xl font-bold text-white">
             Makhensa Global ICT Services
           </h2>
 
@@ -27,6 +37,7 @@ const Footer = () => {
             solutions, digital skills training, and innovative ICT services
             designed to prepare professionals for the digital future.
           </p>
+
         </div>
 
         {/* QUICK LINKS */}
@@ -35,7 +46,8 @@ const Footer = () => {
             Quick Links
           </h3>
 
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-3 text-sm">
+
             <li>
               <Link to="/about" className="hover:text-yellow-400 transition">
                 About Us
@@ -53,6 +65,7 @@ const Footer = () => {
                 Contact
               </Link>
             </li>
+
           </ul>
         </div>
 
@@ -62,23 +75,28 @@ const Footer = () => {
             Our Services
           </h3>
 
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-3 text-sm">
+
             <li className="hover:text-yellow-400 transition cursor-pointer">
               ICT Training
             </li>
+
             <li className="hover:text-yellow-400 transition cursor-pointer">
               Software Development
             </li>
+
             <li className="hover:text-yellow-400 transition cursor-pointer">
               IT Consulting
             </li>
+
             <li className="hover:text-yellow-400 transition cursor-pointer">
               Technology Solutions
             </li>
+
           </ul>
         </div>
 
-        {/* CONTACT INFO */}
+        {/* CONTACT */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">
             Contact Us
@@ -103,23 +121,23 @@ const Footer = () => {
 
           </ul>
         </div>
+
       </div>
 
       {/* DIVIDER */}
-      <div className="border-t border-gray-700"></div>
+      <div className="border-t border-gray-700" />
 
       {/* BOTTOM FOOTER */}
       <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center">
 
-        <p className="text-sm text-gray-400 mb-4 md:mb-0">
+        <p className="text-sm text-gray-400">
           © {new Date().getFullYear()} Makhensa Global ICT Services. All rights reserved.
         </p>
 
         {/* SOCIAL ICONS */}
-        <div className="flex space-x-5 text-lg">
+        <div className="flex space-x-6 text-xl">
 
-          <a
-            href="https://www.facebook.com/profile.php?id=61572482734254"
+          <a href="https://www.facebook.com/profile.php?id=61572482734254"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-yellow-400 transition"
@@ -127,8 +145,7 @@ const Footer = () => {
             <FaFacebook />
           </a>
 
-          <a
-            href="https://wa.me/0818331003?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+          <a href="https://wa.me/0818331003"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-yellow-400 transition"
@@ -136,8 +153,7 @@ const Footer = () => {
             <FaWhatsapp />
           </a>
 
-          <a
-            href="https://www.linkedin.com"
+          <a href="https://www.linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-yellow-400 transition"
@@ -146,6 +162,7 @@ const Footer = () => {
           </a>
 
         </div>
+
       </div>
 
     </footer>

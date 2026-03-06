@@ -1,130 +1,237 @@
-import React, { useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
-import StartUP from '../assets/startUP.webp';
-import TeamWork from '../assets/teamwork.webp';
-import student from '../assets/student.webp';
-import Business from '../assets/business.webp';
-import { FaWhatsapp } from 'react-icons/fa';
-import { motion } from 'framer-motion';
-import { fadeIn } from '../variants';
-import backGround from '../assets/a.avif';
+import React, { useCallback, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa";
+import { fadeIn } from "../variants";
 
-const ServiceCard = ({ title, imgSrc, description, onReadMore, id }) => (
-    <div className='bg-blue-900 shadow-lg rounded-lg p-4 m-2 w-lg sm:w-full md:w-full lg:w-full transition-transform duration-700 transform hover:scale-100 ease-in-out'>
-        <h3 className='text-yellow-400 text-2xl font-semibold mb-2'>{title}</h3>
-        <img src={imgSrc} alt={`${title} illustration`} className='w-full h-20 object-contain rounded-md mb-5' loading="lazy" />
-        <p className='text-gray-200 text-lg mb-4'>{description}</p>
-        <button 
-            className='bg-yellow-400 text-gray-500 py-2 px-4 rounded hover:bg-yellow-500 transition duration-300' 
-            onClick={() => onReadMore(id)} 
-            aria-label={`Read more about ${title}`}
-        >
-            Read more...
-        </button>
-    </div>
-);
+import StartUP from "../assets/startUP.webp";
+import TeamWork from "../assets/teamwork.webp";
+import student from "../assets/student.webp";
+import Business from "../assets/business.webp";
+import backGround from "../assets/a.avif";
+
+
+// Optimized service card
+const ServiceCard = React.memo(({ title, imgSrc, description, id, onReadMore }) => {
+  return (
+    <motion.div
+      whileHover={{ y: -8 }}
+      className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 flex flex-col"
+    >
+      <img
+        src={imgSrc}
+        alt={title}
+        className="w-full h-40 object-cover rounded-lg mb-4"
+        loading="lazy"
+      />
+
+      <h3 className="text-xl font-bold text-blue-900 mb-2">{title}</h3>
+
+      <p className="text-gray-600 flex-grow">{description}</p>
+
+      <button
+        onClick={() => onReadMore(id)}
+        className="mt-4 bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded-md transition"
+      >
+        Learn More
+      </button>
+    </motion.div>
+  );
+});
+
 
 const Services = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const handleReadMore = useCallback((id) => {
-        navigate(`/services-items/${id}`);
-    }, [navigate]);
+  const handleReadMore = useCallback(
+    (id) => {
+      navigate(`/services-items/${id}`);
+    },
+    [navigate]
+  );
 
-    const services = [
-        {
-            id: 1,
-            title: 'Makhensa Global Tech Solutions',
-            imgSrc: TeamWork,
-            description: 'We provide outstanding customer experiences through our wide range of services, focusing on customer satisfaction and engagement.',
-        },
-        {
-            id: 2,
-            title: 'Makhensa Global Internships And Learnerships',
-            imgSrc: student,
-            description: 'Work-based learning experience at a company where you perform entry-level tasks. It resembles a job because you engage in real work that professionals do, but the main goal is to learn about the workplace and develop skills.',
-        },
-        {
-            id: 3,
-            title: 'Makhensa Global Training Course',
-            imgSrc: Business,
-            description: 'Principles and processes that help identify and evaluate a person\'s existing knowledge and skills. The goal is to ensure these are clearly recognized and assessed for alternative access, admission, or opportunities for further learning and development.',
-        },
-    ];
 
-    return (
-        <div className='relative bg-zinc-100 min-h-screen'>
-            <div className='mt-6'>
-                <div className='flex flex-col md:flex-row items-center'>
-                    <motion.div 
-                        variants={fadeIn("right", 0.01)}
-                        initial="hidden"
-                        whileInView={"show"}
-                        viewport={{ once: false, amount: 0.01 }}
-                        className='m-10 flex-1'
-                    >
-                        <h1 className='text-5xl sm:text-6xl lg:text-7xl font-semibold text-slate-600 mb-3'>
-                            With small <br /> Beginnings, <br /> Comes Greater <br />
-                            <em className='text-yellow-600'>Things.</em>
-                        </h1>
-                        <img src={StartUP} alt='Start-up illustration' className='rounded-3xl w-full md:w-2/3' />
-                    </motion.div>
-                    <div className='m-5 flex-1'>
-                        <h2 className='flex justify-center items-center text-gray-700 text-2xl bg-yellow-300 
-                        max-w-sm px-5 py-2 rounded-tl-full rounded-tr-full'>
-                            Explore Our Services
-                        </h2>
-                        <div className='flex flex-wrap justify-center p-6 bg-gray-100 rounded-b-lg'>
-                            {services.map(service => (
-                                <ServiceCard 
-                                    key={service.id} 
-                                    {...service}
-                                    onReadMore={handleReadMore}
-                                />
-                            ))}
-                        </div>
-                    </div>
-                </div>
-                <div
-                    style={{ backgroundImage: `url(${backGround})` }}
-                    className="bg-contain bg-center min-h-36"
-                >
-                    <div className='flex flex-col md:flex-row justify-between items-center mt-20 flex-grow'>
-                        <motion.div
-                            variants={fadeIn("right", 0.01)}
-                            initial="hidden"
-                            whileInView={"show"}
-                            viewport={{ once: false, amount: 0.1 }}
-                            className='bg-gray-200 rounded-2xl m-5 p-6 flex-1 shadow-lg bg-transparent '
-                        >
-                            <h2 className='text-blue-700 text-4xl md:text-3xl font-bold mb-4'>
-                                Elevating Business Performance <br /> with Unmatched ICT Services
-                            </h2>
-                            <p className='text-gray-600 text-lg mb-6'>
-                                We pride ourselves on delivering exceptional speed and unwavering reliability in our ICT solutions. 
-                                With over 10 years of industry experience, our dedicated team is committed to providing valuable insights and high-quality services that enable your business to succeed. 
-                                We understand the unique challenges faced by businesses today and tailor our solutions to meet your specific needs. 
-                                Our expertise spans various sectors, 
-                                ensuring that we can support your growth and innovation in an ever-evolving digital landscape.  
-                            </p>
-                        </motion.div>
-                    </div>
-                </div>
-                <div className="fixed bottom-5 right-5 z-50">
-                    <a 
-                        href="https://wa.me/0818331003?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="bg-green-500 text-white px-4 py-2 rounded-lg shadow -lg hover:bg-green-600 transition duration-500 flex items-center"
-                        aria-label="Contact us on WhatsApp"
-                    >
-                        Contact Us on WhatsApp
-                        <FaWhatsapp className="mr-2 m-2" />
-                    </a>
-                </div>
-            </div>
+  // Memoized services data
+  const services = useMemo(
+    () => [
+      {
+        id: 1,
+        title: "Makhensa Global Tech Solutions",
+        imgSrc: TeamWork,
+        description:
+          "We provide advanced ICT services designed to enhance operational efficiency, improve customer experiences, and support digital transformation for modern businesses.",
+      },
+      {
+        id: 2,
+        title: "Internships & Learnerships",
+        imgSrc: student,
+        description:
+          "Our work-based learning programs provide students with real industry experience while developing professional and technical skills required in today's workplace.",
+      },
+      {
+        id: 3,
+        title: "Professional Training Courses",
+        imgSrc: Business,
+        description:
+          "We offer structured training programs that assess, develop, and certify professional competencies to support career advancement and business growth.",
+      },
+    ],
+    []
+  );
+
+
+  return (
+    <div className="bg-gray-50">
+
+      {/* HERO SECTION */}
+      <section className="relative min-h-[70vh] flex items-center justify-center">
+
+        <img
+          src={backGround}
+          alt="background"
+          className="absolute w-full h-full object-cover"
+        />
+
+        <div className="absolute inset-0 bg-blue-900/80"></div>
+
+        <div className="relative text-center max-w-4xl px-6">
+
+          <motion.h1
+            variants={fadeIn("down", 0.1)}
+            initial="hidden"
+            animate="show"
+            className="text-4xl md:text-6xl font-bold text-white"
+          >
+            Transforming Ideas Into
+            <span className="text-yellow-400"> Digital Solutions</span>
+          </motion.h1>
+
+          <p className="text-gray-200 mt-6 text-lg">
+            Delivering innovative ICT services, professional training,
+            and business solutions that empower organizations and
+            individuals to succeed in the digital economy.
+          </p>
+
         </div>
-    );
+
+      </section>
+
+
+      {/* INTRO SECTION */}
+      <section className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+
+        <motion.div
+          variants={fadeIn("right", 0.2)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            Small Beginnings Lead to
+            <span className="text-yellow-500"> Great Achievements</span>
+          </h2>
+
+          <p className="text-gray-600 mb-6 text-lg">
+            At Makhensa Global ICT Services, we believe in empowering
+            businesses and individuals through innovative technology,
+            professional development, and strategic support.
+          </p>
+
+          <p className="text-gray-600 text-lg">
+            With over a decade of experience, we provide high-quality
+            ICT solutions, training programs, and industry-focused
+            services that drive growth and long-term success.
+          </p>
+        </motion.div>
+
+
+        <motion.img
+          variants={fadeIn("left", 0.2)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          src={StartUP}
+          alt="startup"
+          className="rounded-2xl shadow-xl"
+        />
+
+      </section>
+
+
+
+      {/* SERVICES GRID */}
+      <section className="max-w-7xl mx-auto px-6 pb-20">
+
+        <div className="text-center mb-16">
+
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Our Services
+          </h2>
+
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            We provide a comprehensive range of ICT services,
+            professional training, and business support solutions
+            designed to help organizations succeed in a digital world.
+          </p>
+
+        </div>
+
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          {services.map((service) => (
+            <ServiceCard
+              key={service.id}
+              {...service}
+              onReadMore={handleReadMore}
+            />
+          ))}
+
+        </div>
+
+      </section>
+
+
+
+      {/* BUSINESS SECTION */}
+      <section className="bg-blue-900 text-white py-20">
+
+        <div className="max-w-6xl mx-auto px-6 text-center">
+
+          <h2 className="text-4xl font-bold mb-6">
+            Elevating Business Performance With ICT
+          </h2>
+
+          <p className="text-lg text-gray-200 max-w-3xl mx-auto">
+            Our dedicated team delivers reliable ICT solutions that
+            help businesses adapt, innovate, and grow in an evolving
+            digital landscape. We combine industry expertise with
+            cutting-edge technology to ensure measurable results.
+          </p>
+
+        </div>
+
+      </section>
+
+
+
+      {/* WHATSAPP CTA */}
+      <div className="fixed bottom-6 right-6 z-50">
+
+        <a
+          href="https://wa.me/0818331003"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full shadow-xl flex items-center gap-2 transition"
+        >
+          Chat With Us
+          <FaWhatsapp />
+        </a>
+
+      </div>
+
+    </div>
+  );
 };
 
 export default Services;
