@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Claymorphism foundation */
+:root {
+  --clay-bg: #e9eef5;
+  --clay-highlight: rgba(255, 255, 255, 0.9);
+  --clay-shadow: rgba(163, 177, 198, 0.55);
+  --clay-border: rgba(255, 255, 255, 0.45);
+}
+
+body {
+  background: var(--clay-bg);
+  color: #0f2a44;
+}
+
+.clay-card {
+  background: var(--clay-bg);
+  border: 1px solid var(--clay-border);
+  box-shadow:
+    10px 10px 20px var(--clay-shadow),
+    -10px -10px 20px var(--clay-highlight);
+}
+
+.clay-card--pressed:active {
+  box-shadow:
+    inset 8px 8px 16px var(--clay-shadow),
+    inset -8px -8px 16px var(--clay-highlight);
+}
+
+.clay-pressable {
+  border: 1px solid var(--clay-border);
+  box-shadow:
+    10px 10px 20px var(--clay-shadow),
+    -10px -10px 20px var(--clay-highlight);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.clay-pressable:active {
+  box-shadow:
+    inset 8px 8px 16px var(--clay-shadow),
+    inset -8px -8px 16px var(--clay-highlight);
+  transform: translateY(1px);
+}
+
+.clay-inset {
+  box-shadow:
+    inset 8px 8px 16px var(--clay-shadow),
+    inset -8px -8px 16px var(--clay-highlight);
+}
+
+.clay-pill {
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow:
+    6px 6px 12px rgba(163, 177, 198, 0.35),
+    -6px -6px 12px rgba(255, 255, 255, 0.7);
+}
