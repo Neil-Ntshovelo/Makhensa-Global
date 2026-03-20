@@ -7,6 +7,7 @@ export const jobs = [
     employmentType: "Full-time",
     postedDate: "2026-03-05",
     closingDate: "2026-04-20",
+    status: "none",
     description:
       "Support enterprise ICT discovery, propose solutions, and coordinate delivery across stakeholders.",
     requirements: [
@@ -23,6 +24,7 @@ export const jobs = [
     employmentType: "Contract",
     postedDate: "2026-03-12",
     closingDate: "2026-04-05",
+    status: "none",
     description:
       "Analyse operational datasets, build reporting dashboards, and support continuous improvement initiatives.",
     requirements: [
@@ -39,6 +41,7 @@ export const jobs = [
     employmentType: "Full-time",
     postedDate: "2026-03-01",
     closingDate: "2026-03-31",
+    status: "none",
     description:
       "Provide reliable support through troubleshooting, escalation handling, and customer-friendly communication.",
     requirements: [

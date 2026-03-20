@@ -49,31 +49,31 @@ const Footer = () => {
           <ul className="space-y-3 text-sm">
 
             <li>
-              <Link to="/about" className="hover:text-yellow-400 transition">
+              <Link to="/about" className="hover:text-cyan-400 transition">
                 About Us
               </Link>
             </li>
 
             <li>
-              <Link to="/programs" className="hover:text-yellow-400 transition">
+              <Link to="/programs" className="hover:text-cyan-400 transition">
                 Learnerships & Internships
               </Link>
             </li>
 
             <li>
-              <Link to="/jobs" className="hover:text-yellow-400 transition">
+              <Link to="/jobs" className="hover:text-cyan-400 transition">
                 Available Jobs
               </Link>
             </li>
 
             <li>
-              <Link to="/services-items" className="hover:text-yellow-400 transition">
+              <Link to="/services-items" className="hover:text-cyan-400 transition">
                 Our Services
               </Link>
             </li>
 
             <li>
-              <Link to="/contact" className="hover:text-yellow-400 transition">
+              <Link to="/contact" className="hover:text-cyan-400 transition">
                 Contact
               </Link>
             </li>
@@ -89,19 +89,19 @@ const Footer = () => {
 
           <ul className="space-y-3 text-sm">
 
-            <li className="hover:text-yellow-400 transition cursor-pointer">
+            <li className="hover:text-cyan-400 transition cursor-pointer">
               ICT Training
             </li>
 
-            <li className="hover:text-yellow-400 transition cursor-pointer">
+            <li className="hover:text-cyan-400 transition cursor-pointer">
               Software Development
             </li>
 
-            <li className="hover:text-yellow-400 transition cursor-pointer">
+            <li className="hover:text-cyan-400 transition cursor-pointer">
               IT Consulting
             </li>
 
-            <li className="hover:text-yellow-400 transition cursor-pointer">
+            <li className="hover:text-cyan-400 transition cursor-pointer">
               Technology Solutions
             </li>
 
@@ -117,17 +117,17 @@ const Footer = () => {
           <ul className="space-y-3 text-sm">
 
             <li className="flex items-center gap-2">
-              <FaMapMarkerAlt className="text-yellow-400" />
+              <FaMapMarkerAlt className="text-cyan-400" />
               South Africa
             </li>
 
             <li className="flex items-center gap-2">
-              <FaPhone className="text-yellow-400" />
+              <FaPhone className="text-cyan-400" />
               081 833 1003
             </li>
 
             <li className="flex items-center gap-2">
-              <FaEnvelope className="text-yellow-400" />
+              <FaEnvelope className="text-cyan-400" />
               info@makhensaict.co.za
             </li>
 
@@ -152,7 +152,7 @@ const Footer = () => {
           <a href="https://www.facebook.com/profile.php?id=61572482734254"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-yellow-400 transition"
+            className="hover:text-cyan-400 transition"
           >
             <FaFacebook />
           </a>
@@ -160,7 +160,7 @@ const Footer = () => {
           <a href="https://wa.me/0818331003"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-yellow-400 transition"
+            className="hover:text-cyan-400 transition"
           >
             <FaWhatsapp />
           </a>
@@ -168,7 +168,7 @@ const Footer = () => {
           <a href="https://www.linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-yellow-400 transition"
+            className="hover:text-cyan-400 transition"
           >
             <FaLinkedin />
           </a>

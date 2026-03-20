@@ -6,19 +6,19 @@ import Logo from "./Logo";
 const NavLinks = () => {
   return (
     <>
-      <RouterNavLink to="/" className="text-white font-semibold hover:text-yellow-400 mb-2 transition">
+      <RouterNavLink to="/" className="text-white font-semibold hover:text-cyan-400 mb-2 transition">
         Home
       </RouterNavLink>
-      <RouterNavLink to="/programs" className="text-white font-semibold hover:text-yellow-400 mb-2 transition">
+      <RouterNavLink to="/programs" className="text-white font-semibold hover:text-cyan-400 mb-2 transition">
         Programs
       </RouterNavLink>
-      <RouterNavLink to="/jobs" className="text-white font-semibold hover:text-yellow-400 mb-2 transition">
+      <RouterNavLink to="/jobs" className="text-white font-semibold hover:text-cyan-400 mb-2 transition">
         Jobs
       </RouterNavLink>
-      <RouterNavLink to="/about" className="text-white font-semibold hover:text-yellow-400 mb-2 transition">
+      <RouterNavLink to="/about" className="text-white font-semibold hover:text-cyan-400 mb-2 transition">
         About
       </RouterNavLink>
-      <RouterNavLink to="/contact" className="text-white font-semibold hover:text-yellow-400 mb-2 transition">
+      <RouterNavLink to="/contact" className="text-white font-semibold hover:text-cyan-400 mb-2 transition">
         Contact Us
       </RouterNavLink>
 

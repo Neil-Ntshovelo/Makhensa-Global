@@ -16,7 +16,7 @@ const Impact = () => {
                   initial="hidden"
                   whileInView={"show"}
                   viewport={{ once: false, amount: 0.5 }}
-                  className='text-3xl text-yellow-600 font-semibold text-center mb-5'>Our Impact</motion.h3>
+                  className='text-3xl text-cyan-500 font-semibold text-center mb-5'>Our Impact</motion.h3>
               <div className='flex flex-col md:flex-row justify-evenly items-center'>
                   {counterOn && (
                       <>

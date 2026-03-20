@@ -34,7 +34,7 @@ const About = () => {
         <div className="relative text-center max-w-4xl px-6">
           <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
             Building Future Leaders Through
-            <span className="text-yellow-400"> Technology & Business</span>
+            <span className="text-cyan-400"> Technology & Business</span>
           </h1>
 
           <p className="mt-6 text-lg md:text-xl text-gray-200">
@@ -114,7 +114,7 @@ const About = () => {
 
         <Link
           to="/services-items"
-          className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition"
+          className="bg-cyan-400 text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500 transition"
         >
           View Our Services
         </Link>

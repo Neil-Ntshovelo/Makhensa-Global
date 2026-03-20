@@ -1,11 +1,7 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FaArrowLeft, FaCheckCircle } from "react-icons/fa";
-
-import First from "../assets/first.avif";
-import Second from "../assets/Second.avif";
-import Third from "../assets/three.avif";
+import { FaArrowLeft, FaCheckCircle, FaChalkboardTeacher, FaGraduationCap, FaServer } from "react-icons/fa";
 
 const services = [
   {
@@ -22,7 +18,7 @@ const services = [
       "Technical Support & HelpDesk",
       "Data Analytics & Business Intelligence",
     ],
-    image: First,
+    icon: FaServer,
   },
   {
     id: 2,
@@ -46,7 +42,7 @@ const services = [
       "Financial Agent",
       "Educational Systems Coordinator",
     ],
-    image: Second,
+    icon: FaGraduationCap,
   },
   {
     id: 3,
@@ -58,7 +54,7 @@ const services = [
       "Corporate Skills Development",
       "Leadership & Digital Transformation",
     ],
-    image: Third,
+    icon: FaChalkboardTeacher,
   },
 ];
 
@@ -67,6 +63,7 @@ const ServicesItems = () => {
   const navigate = useNavigate();
 
   const service = services.find((s) => s.id === parseInt(id));
+  const Icon = service?.icon;
 
   if (!service) {
     return (
@@ -77,7 +74,7 @@ const ServicesItems = () => {
   }
 
   return (
-    <section className="bg-gray-50 min-h-screen py-20 px-6">
+    <section className="bg-white min-h-screen py-20 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Back Button */}
@@ -91,19 +88,14 @@ const ServicesItems = () => {
 
         <div className="grid lg:grid-cols-2 gap-14 items-center">
 
-          {/* IMAGE */}
+          {/* ICON */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="rounded-2xl overflow-hidden shadow-xl"
+            className="clay-card rounded-2xl p-12 shadow-xl text-center"
           >
-            <img
-              src={service.image}
-              alt={service.title}
-              loading="lazy"
-              className="w-full h-[420px] object-cover"
-            />
+            {Icon ? <Icon className="text-cyan-500 text-7xl mx-auto" /> : null}
           </motion.div>
 
           {/* CONTENT */}
@@ -116,11 +108,11 @@ const ServicesItems = () => {
               {service.title}
             </h1>
 
-            <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+            <p className="text-blue-900/70 text-lg mb-8 leading-relaxed">
               {service.description}
             </p>
 
-            <h3 className="text-2xl font-semibold text-gray-800 mb-5">
+            <h3 className="text-2xl font-semibold text-blue-900 mb-5">
               Services Offered
             </h3>
 
@@ -130,8 +122,8 @@ const ServicesItems = () => {
                   key={index}
                   className="flex items-start gap-3 clay-card p-3 rounded-lg transition"
                 >
-                  <FaCheckCircle className="text-yellow-500 mt-1" />
-                  <span className="text-gray-700">{item}</span>
+                  <FaCheckCircle className="text-cyan-500 mt-1" />
+                  <span className="text-blue-900/80">{item}</span>
                 </div>
               ))}
             </div>
@@ -140,7 +132,7 @@ const ServicesItems = () => {
             <div className="mt-10">
               <button
                 onClick={() => navigate("/contact")}
-                className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-lg shadow-md transition"
+                className="bg-cyan-400 hover:bg-cyan-500 text-blue-900 px-6 py-3 rounded-lg shadow-md transition"
               >
                 Contact Our Team
               </button>

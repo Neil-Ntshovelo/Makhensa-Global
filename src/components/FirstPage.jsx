@@ -36,7 +36,7 @@ const FirstPage = () => {
             className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight"
           >
             Empower Your Future Through{" "}
-            <span className="text-yellow-400">
+            <span className="text-cyan-400">
               Technology & Innovation
             </span>
           </motion.h1>
@@ -60,8 +60,8 @@ const FirstPage = () => {
             className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Link
-              to="/services"
-              className="px-8 py-3 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold rounded-lg shadow-lg transition"
+              to="/services-items"
+              className="px-8 py-3 bg-cyan-400 hover:bg-cyan-500 text-blue-900 font-semibold rounded-lg shadow-lg transition"
             >
               Explore Programs
             </Link>

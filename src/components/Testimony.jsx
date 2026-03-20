@@ -39,7 +39,7 @@ const Testimony = () => {
               <div className="clay-card rounded-2xl p-10 mx-4 transition duration-500 hover:transform hover:-translate-y-0.5">
 
                 {/* QUOTE ICON */}
-                <FaQuoteLeft className="text-yellow-400 text-3xl mb-4 mx-auto" />
+                <FaQuoteLeft className="text-cyan-400 text-3xl mb-4 mx-auto" />
 
                 {/* QUOTE */}
                 <p className="text-gray-700 text-lg leading-relaxed mb-6">

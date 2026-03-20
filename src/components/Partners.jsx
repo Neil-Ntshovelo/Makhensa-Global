@@ -21,7 +21,7 @@ const Partners = () => {
   return (
     <div className='py-10 bg-white'>
       <div className='text-center'>
-        <h3 className='text-2xl font-bold mb-6 text-yellow-600'>
+        <h3 className='text-2xl font-bold mb-6 text-cyan-500'>
           Our <br /> Collaborative <br /> Partnerships
         </h3>
         <div className='max-w-2xl mx-auto relative'>

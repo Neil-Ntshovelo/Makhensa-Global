@@ -2,6 +2,7 @@ export const opportunities = [
   {
     id: "learnership-ict-data-2026-q1",
     category: "learnership",
+    status: "none",
     title: "ICT Systems & Data Administrator Learnership",
     location: "South Africa (Remote/On-site)",
     startDate: "2026-03-01",
@@ -19,6 +20,7 @@ export const opportunities = [
   {
     id: "learnership-finance-risk-2026-q1",
     category: "learnership",
+    status: "none",
     title: "Organisation Risk Management Learnership",
     location: "South Africa (On-site)",
     startDate: "2026-02-15",
@@ -36,6 +38,7 @@ export const opportunities = [
   {
     id: "internship-software-dev-2026-q1",
     category: "internship",
+    status: "none",
     title: "Software Development Internship",
     location: "South Africa (Hybrid)",
     startDate: "2026-03-10",
@@ -53,6 +56,7 @@ export const opportunities = [
   {
     id: "internship-business-ops-2026-q1",
     category: "internship",
+    status: "none",
     title: "Business Operations Internship (Digital Skills)",
     location: "South Africa (Remote)",
     startDate: "2026-01-20",

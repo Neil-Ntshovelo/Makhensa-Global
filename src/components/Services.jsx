@@ -1,15 +1,10 @@
 import { useCallback, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaChalkboardTeacher, FaGraduationCap, FaServer, FaWhatsapp } from "react-icons/fa";
 import { fadeIn } from "../variants";
 import ServiceCard from "./ServiceCard";
 
-import StartUP from "../assets/startUP.webp";
-import TeamWork from "../assets/teamwork.webp";
-import student from "../assets/student.webp";
-import Business from "../assets/business.webp";
-import backGround from "../assets/a.avif";
 
 
 const Services = () => {
@@ -29,21 +24,21 @@ const Services = () => {
       {
         id: 1,
         title: "Makhensa Global Tech Solutions",
-        imgSrc: TeamWork,
+        icon: FaServer,
         description:
           "We provide advanced ICT services designed to enhance operational efficiency, improve customer experiences, and support digital transformation for modern businesses.",
       },
       {
         id: 2,
         title: "Internships & Learnerships",
-        imgSrc: student,
+        icon: FaGraduationCap,
         description:
           "Our work-based learning programs provide students with real industry experience while developing professional and technical skills required in today's workplace.",
       },
       {
         id: 3,
         title: "Professional Training Courses",
-        imgSrc: Business,
+        icon: FaChalkboardTeacher,
         description:
           "We offer structured training programs that assess, develop, and certify professional competencies to support career advancement and business growth.",
       },
@@ -53,18 +48,10 @@ const Services = () => {
 
 
   return (
-    <div className="bg-gray-50">
+    <div className="bg-white">
 
       {/* HERO SECTION */}
-      <section className="relative min-h-[70vh] flex items-center justify-center">
-
-        <img
-          src={backGround}
-          alt="background"
-          className="absolute w-full h-full object-cover"
-        />
-
-        <div className="absolute inset-0 bg-blue-900/80"></div>
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-blue-900">
 
         <div className="relative text-center max-w-4xl px-6">
 
@@ -75,10 +62,10 @@ const Services = () => {
             className="text-4xl md:text-6xl font-bold text-white"
           >
             Transforming Ideas Into
-            <span className="text-yellow-400"> Digital Solutions</span>
+            <span className="text-cyan-400"> Digital Solutions</span>
           </motion.h1>
 
-          <p className="text-gray-200 mt-6 text-lg">
+          <p className="text-white/80 mt-6 text-lg">
             Delivering innovative ICT services, professional training,
             and business solutions that empower organizations and
             individuals to succeed in the digital economy.
@@ -98,18 +85,18 @@ const Services = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl font-bold text-blue-900 mb-6">
             Small Beginnings Lead to
-            <span className="text-yellow-500"> Great Achievements</span>
+            <span className="text-cyan-500"> Great Achievements</span>
           </h2>
 
-          <p className="text-gray-600 mb-6 text-lg">
+          <p className="text-blue-900/70 mb-6 text-lg">
             At Makhensa Global ICT Services, we believe in empowering
             businesses and individuals through innovative technology,
             professional development, and strategic support.
           </p>
 
-          <p className="text-gray-600 text-lg">
+          <p className="text-blue-900/70 text-lg">
             With over a decade of experience, we provide high-quality
             ICT solutions, training programs, and industry-focused
             services that drive growth and long-term success.
@@ -117,15 +104,16 @@ const Services = () => {
         </motion.div>
 
 
-        <motion.img
+        <motion.div
           variants={fadeIn("left", 0.2)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          src={StartUP}
-          alt="startup"
-          className="rounded-2xl shadow-xl"
-        />
+          className="clay-card rounded-2xl p-12 shadow-xl text-center"
+        >
+          <FaServer className="text-cyan-500 text-7xl mx-auto" />
+          <p className="text-blue-900/70 mt-4">Reliable delivery. Clear outcomes.</p>
+        </motion.div>
 
       </section>
 
@@ -136,11 +124,11 @@ const Services = () => {
 
         <div className="text-center mb-16">
 
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-blue-900 mb-4">
             Our Services
           </h2>
 
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-blue-900/70 max-w-2xl mx-auto">
             We provide a comprehensive range of ICT services,
             professional training, and business support solutions
             designed to help organizations succeed in a digital world.
@@ -174,7 +162,7 @@ const Services = () => {
             Elevating Business Performance With ICT
           </h2>
 
-          <p className="text-lg text-gray-200 max-w-3xl mx-auto">
+          <p className="text-lg text-white/80 max-w-3xl mx-auto">
             Our dedicated team delivers reliable ICT solutions that
             help businesses adapt, innovate, and grow in an evolving
             digital landscape. We combine industry expertise with
