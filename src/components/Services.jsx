@@ -1,43 +1,15 @@
-import React, { useCallback, useMemo } from "react";
+import { useCallback, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
 import { fadeIn } from "../variants";
+import ServiceCard from "./ServiceCard";
 
 import StartUP from "../assets/startUP.webp";
 import TeamWork from "../assets/teamwork.webp";
 import student from "../assets/student.webp";
 import Business from "../assets/business.webp";
 import backGround from "../assets/a.avif";
-
-
-// Optimized service card
-const ServiceCard = React.memo(({ title, imgSrc, description, id, onReadMore }) => {
-  return (
-    <motion.div
-      whileHover={{ y: -8 }}
-      className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 flex flex-col"
-    >
-      <img
-        src={imgSrc}
-        alt={title}
-        className="w-full h-40 object-cover rounded-lg mb-4"
-        loading="lazy"
-      />
-
-      <h3 className="text-xl font-bold text-blue-900 mb-2">{title}</h3>
-
-      <p className="text-gray-600 flex-grow">{description}</p>
-
-      <button
-        onClick={() => onReadMore(id)}
-        className="mt-4 bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded-md transition"
-      >
-        Learn More
-      </button>
-    </motion.div>
-  );
-});
 
 
 const Services = () => {

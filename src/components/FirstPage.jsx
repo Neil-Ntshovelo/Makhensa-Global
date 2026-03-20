@@ -7,6 +7,8 @@ import MainPage from "./MainPage";
 import Services from "./Services";
 import Impact from "./Impact";
 import Partners from "./Partners";
+import CurrentOpportunities from "./CurrentOpportunities";
+import CurrentJobs from "./CurrentJobs";
 
 const FirstPage = () => {
   return (
@@ -75,9 +77,11 @@ const FirstPage = () => {
       </section>
 
       {/* CONTENT SECTIONS */}
-      <section className="bg-gray-50">
+      <section>
         <MainPage />
         <Services />
+        <CurrentOpportunities />
+        <CurrentJobs />
         <Impact />
         <Partners />
       </section>

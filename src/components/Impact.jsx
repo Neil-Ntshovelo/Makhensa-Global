@@ -10,7 +10,7 @@ const Impact = () => {
 
   return (
       <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}>
-          <div className='mt-8 bg-gray-100 py-10 rounded-2xl m-2'>
+          <div className='mt-8 clay-card py-10 rounded-2xl m-2'>
               <motion.h3 
                   variants={fadeIn("up", 0.01)}
                   initial="hidden"

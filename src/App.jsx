@@ -8,12 +8,14 @@ import Footer from './components/Footer';
 import Services from './components/Services';
 import ServicesItems from './components/ServicesItems';
 import ScrollToTop from './components/ScrollToTop'; // Import the ScrollToTop component
+import Opportunities from './components/Opportunities';
+import Jobs from './components/Jobs';
 import './App.css'; 
 
 const App = () => {
     return (
         <Router>
-            <div className='bg-zinc-100 min-h-screen flex flex-col'>
+            <div className='min-h-screen flex flex-col'>
                 <NavBar />
                 <ScrollToTop /> {/* Add ScrollToTop here */}
                 <main className="flex-grow">
@@ -23,6 +25,8 @@ const App = () => {
                         <Route path="/about" element={<About />} />
                         <Route path="/services-items/:id" element={<ServicesItems />} />
                         <Route path="/services-items" element={<Services />} />
+                        <Route path="/programs" element={<Opportunities />} />
+                        <Route path="/jobs" element={<Jobs />} />
                     </Routes>
                 </main>
                 <Footer />

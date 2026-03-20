@@ -10,9 +10,11 @@ import {
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import Contact from "../assets/contact.avif";
+import { useLocation } from "react-router-dom";
 
 const ContactUs = () => {
   const buttonRef = useRef(null);
+  const location = useLocation();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -97,6 +99,17 @@ const ContactUs = () => {
       return () => clearTimeout(timeout);
     }
   }, []);
+
+  // Prefill message for "Apply / Enquire" actions from Opportunities/Jobs pages
+  useEffect(() => {
+    const prefillMessage = location?.state?.prefillMessage;
+    if (!prefillMessage || submitted) return;
+
+    setFormData((prev) => {
+      if (prev.message) return prev;
+      return { ...prev, message: prefillMessage };
+    });
+  }, [location?.state, submitted]);
 
   return (
     <>
@@ -207,7 +220,7 @@ const ContactUs = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="bg-white p-8 rounded-xl shadow-xl"
+            className="clay-card p-8 rounded-xl"
           >
 
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">

@@ -8,7 +8,7 @@ const MainPage = () => {
       <h2 className="flex justify-center text-blue-700 font-bold text-4xl sm:text-7xl mb-4 sm:mb-12">
         Makhensa Global
       </h2>
-      <article className="flex justify-center items-center text-center max-w-2xl mx-auto mt-2 p-8 rounded-[80px] shadow-lg">
+      <article className="clay-card flex justify-center items-center text-center max-w-2xl mx-auto mt-2 p-8 rounded-[80px]">
         <motion.p
           variants={fadeIn("up", 0.01)}
           initial="hidden"

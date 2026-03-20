@@ -83,7 +83,7 @@ const About = () => {
             {missionData.map((mission, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition"
+                className="clay-card p-6 rounded-xl hover:transform hover:-translate-y-0.5 transition"
               >
                 <h3 className="font-semibold text-blue-700 mb-2">
                   {mission.title}
@@ -142,7 +142,7 @@ const About = () => {
 };
 
 const VisionCard = ({ content }) => (
-  <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition">
+  <div className="clay-card p-6 rounded-xl hover:transform hover:-translate-y-0.5 transition">
     <p className="text-gray-600 leading-relaxed">{content}</p>
   </div>
 );

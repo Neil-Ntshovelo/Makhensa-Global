@@ -128,7 +128,7 @@ const ServicesItems = () => {
               {service.items.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-3 bg-white shadow-sm p-3 rounded-lg hover:shadow-md transition"
+                  className="flex items-start gap-3 clay-card p-3 rounded-lg transition"
                 >
                   <FaCheckCircle className="text-yellow-500 mt-1" />
                   <span className="text-gray-700">{item}</span>

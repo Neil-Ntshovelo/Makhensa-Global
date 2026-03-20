@@ -6,9 +6,21 @@ import Logo from "./Logo";
 const NavLinks = () => {
   return (
     <>
-      <RouterNavLink to="/" className="nav-link text-white font-semibold hover:text-yellow-500 mb-2">Home</RouterNavLink>
-      <RouterNavLink to="/about" className="nav-link text-white font-semibold hover:text-yellow-500 mb-2">About</RouterNavLink>
-      <RouterNavLink to="/contact" className="nav-link text-white font-semibold hover:text-yellow-500 mb-2">Contact Us</RouterNavLink>
+      <RouterNavLink to="/" className="text-white font-semibold hover:text-yellow-400 mb-2 transition">
+        Home
+      </RouterNavLink>
+      <RouterNavLink to="/programs" className="text-white font-semibold hover:text-yellow-400 mb-2 transition">
+        Programs
+      </RouterNavLink>
+      <RouterNavLink to="/jobs" className="text-white font-semibold hover:text-yellow-400 mb-2 transition">
+        Jobs
+      </RouterNavLink>
+      <RouterNavLink to="/about" className="text-white font-semibold hover:text-yellow-400 mb-2 transition">
+        About
+      </RouterNavLink>
+      <RouterNavLink to="/contact" className="text-white font-semibold hover:text-yellow-400 mb-2 transition">
+        Contact Us
+      </RouterNavLink>
 
     </>
   );
@@ -37,7 +49,7 @@ const Nav = () => {
   return (
       <>
           <nav className="flex w-1/3 justify-end">
-              <div className="hidden w-full justify-end pr-20z space-x-10 md:flex">
+              <div className="hidden w-full justify-end pr-20 space-x-10 md:flex">
                   <NavLinks />
               </div>
               <div className="md:hidden">

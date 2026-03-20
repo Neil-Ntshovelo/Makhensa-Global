@@ -55,6 +55,18 @@ const Footer = () => {
             </li>
 
             <li>
+              <Link to="/programs" className="hover:text-yellow-400 transition">
+                Learnerships & Internships
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/jobs" className="hover:text-yellow-400 transition">
+                Available Jobs
+              </Link>
+            </li>
+
+            <li>
               <Link to="/services-items" className="hover:text-yellow-400 transition">
                 Our Services
               </Link>

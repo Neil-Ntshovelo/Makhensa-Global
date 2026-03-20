@@ -36,7 +36,7 @@ const Testimony = () => {
         <Slider {...settings}>
           {testimonials.map((testimonial, index) => (
             <div key={index}>
-              <div className="bg-white shadow-xl rounded-2xl p-10 mx-4 transition duration-500 hover:shadow-2xl">
+              <div className="clay-card rounded-2xl p-10 mx-4 transition duration-500 hover:transform hover:-translate-y-0.5">
 
                 {/* QUOTE ICON */}
                 <FaQuoteLeft className="text-yellow-400 text-3xl mb-4 mx-auto" />
